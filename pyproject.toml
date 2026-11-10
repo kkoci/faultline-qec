@@ -1,0 +1,77 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "faultline-qec"
+version = "0.1.0"
+description = "Deterministic physical Pauli fault schedules for Steane/Selene experiments"
+readme = "README.md"
+authors = [{name = "Khrystian Koci"}]
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "guppyft==0.6.1", "guppylang==1.2.0", "selene-sim==0.3.7",
+  "selene-core==0.3.3", "numpy==2.5.4", "ziglang==0.16.0",
+]
+
+[project.scripts]
+faultline = "faultline.cli:main"
+
+[dependency-groups]
+dev = ["pytest==9.0.2"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/faultline"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.uv]
+environments = ["sys_platform == 'linux'"]
+constraint-dependencies = [
+  "annotated-types==0.8.0",
+  "graphviz==0.21",
+  "guppyft==0.6.1",
+  "guppylang==1.2.0",
+  "guppylang-internals==1.2.0",
+  "hugr==0.18.8",
+  "jinja2==3.1.6",
+  "lark==1.3.1",
+  "lief==1.0.0",
+  "llvmlite==0.50.0",
+  "markupsafe==3.0.4",
+  "mpmath==1.3.0",
+  "msgpack==1.2.4",
+  "networkx==3.7",
+  "numpy==2.5.4",
+  "pandas==3.1.1",
+  "pydantic==2.14.3",
+  "pydantic-core==2.50.4",
+  "pydantic-extra-types==2.11.1",
+  "pydot==4.0.1",
+  "pyparsing==3.3.3",
+  "python-dateutil==4.0.0",
+  "pytket==2.18.5",
+  "pyyaml==6.0.3",
+  "qwasm==1.0.1",
+  "scipy==1.18.1",
+  "selene-core==0.3.3",
+  "selene-formats==0.1.2",
+  "selene-hugr-qis-compiler==0.5.1",
+  "selene-sim==0.3.7",
+  "semver==3.1.1",
+  "setuptools==84.2.1",
+  "sympy==1.14.0",
+  "tket==0.15.14",
+  "tket-eccs==0.6.0",
+  "tket-exts==0.14.3",
+  "tqdm==4.70.1",
+  "typing-extensions==4.16.0",
+  "typing-inspection==0.4.5",
+  "tzdata==2026.6",
+  "wasmtime==48.0.0",
+  "ziglang==0.16.0",
+  "zixy==0.4.3",
+]
