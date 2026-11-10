@@ -10,6 +10,6 @@ with the public repository. References to those local files are retained as
 filenames, rather than links to unavailable artifacts.
 
 The maintained implementation is in `src/faultline/`; current reproduction
-commands and results are in [README](../../README.md) and
-[VALIDATION](../../VALIDATION.md). The complete current pins are in
+commands and results are in the [quickstart](../quickstart.md) and
+[validation record](../validation.md). The complete current pins are in
 `pyproject.toml` and `uv.lock`.

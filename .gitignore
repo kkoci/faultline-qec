@@ -19,3 +19,5 @@ build/
 logs/
 artifacts/
 /gate2-constraints.txt
+
+/site/

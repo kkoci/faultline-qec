@@ -1,5 +1,7 @@
 # faultline-qec v0.1
 
+[Docs](https://kkoci.github.io/faultline-qec/)
+
 Deterministic physical Pauli fault injection for Steane-encoded Guppy programs running on Selene. Linux only, including WSL. No cloud account or hardware access is needed.
 
 The native component implements **Selene's error-model ABI**, including `handle_operations_fn`. It extracts original runtime operations, executes them on the supplied simulator handle, returns actual measurement results, and inserts scheduled physical X, Y or Z gates. It does not replace the simulator, change measurement results or patch Guppy FT.

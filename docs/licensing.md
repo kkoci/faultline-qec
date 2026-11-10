@@ -1,6 +1,6 @@
 # Licensing
 
-faultline-qec is licensed under [Apache-2.0](../LICENSE).
+faultline-qec is licensed under [Apache-2.0](https://github.com/kkoci/faultline-qec/blob/main/LICENSE).
 Copyright 2026 Khrystian Koci. Author metadata is recorded in `pyproject.toml`.
 
 The upstream licence files were checked before adding this project's licence:

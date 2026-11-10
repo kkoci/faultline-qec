@@ -1,0 +1,50 @@
+site_name: faultline-qec
+site_description: Deterministic physical Pauli fault injection for Steane-encoded Guppy programs
+site_url: https://kkoci.github.io/faultline-qec/
+repo_url: https://github.com/kkoci/faultline-qec
+repo_name: kkoci/faultline-qec
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - navigation.footer
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - tables
+  - toc:
+      permalink: true
+
+hooks:
+  - scripts/docs_hooks.py
+
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - Concepts: concepts.md
+  - Results: results.md
+  - Limitations: limitations.md
+  - Feasibility:
+      - Overview: feasibility/README.md
+      - Gate 1: feasibility/gate1.md
+      - Gate 2: feasibility/gate2.md
+  - Validation: validation.md
+  - Sample coverage: sample-coverage.md
+  - Licensing: licensing.md

@@ -19,6 +19,12 @@ dependencies = [
 [project.scripts]
 faultline = "faultline.cli:main"
 
+[project.optional-dependencies]
+docs = [
+  "mkdocs>=1.6,<2",
+  "mkdocs-material>=9.5,<10",
+]
+
 [dependency-groups]
 dev = ["pytest==9.0.2"]
 
